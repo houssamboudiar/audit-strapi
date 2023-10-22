@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "typologies",
+  "info": {
+    "singularName": "typologie",
+    "pluralName": "typologies",
+    "displayName": "Typologie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "Ampere": {
+      "type": "decimal"
+    },
+    "Volt": {
+      "type": "decimal"
+    },
+    "Puissance": {
+      "type": "decimal"
+    },
+    "audit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::audit.audit",
+      "inversedBy": "typologies"
+    },
+    "Heure_conso_ouverture": {
+      "type": "decimal"
+    },
+    "conso_jour_kwh": {
+      "type": "decimal"
+    },
+    "heure_conso_dimanche": {
+      "type": "decimal"
+    },
+    "conso_dimanche_kwh": {
+      "type": "decimal"
+    },
+    "conso_semaine_kwh": {
+      "type": "decimal"
+    },
+    "heures_utilisation_potentielle_jour_ouverture": {
+      "type": "decimal"
+    },
+    "heure_economisable": {
+      "type": "decimal"
+    },
+    "kwh_economisable_par_semaine": {
+      "type": "decimal"
+    },
+    "heure_utilisation_potentielle_dimanche": {
+      "type": "decimal"
+    },
+    "conso_estime_semaine_kwh": {
+      "type": "decimal"
+    },
+    "pourcentage": {
+      "type": "decimal"
+    },
+    "releve_consommations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::releve-consommation.releve-consommation",
+      "mappedBy": "typologie"
+    }
+  }
+}

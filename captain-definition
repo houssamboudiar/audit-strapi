@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 2,
+  "templateId": "node/20.7.0",
+  "dockerfileLines": [
+
+  ],
+  "envVars": {
+    "NODE_ENV": "production",
+    "DATABASE_CLIENT": "sqlite"
+  }
+}
